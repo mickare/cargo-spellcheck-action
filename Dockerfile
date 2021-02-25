@@ -10,4 +10,5 @@ RUN apt-get update && apt-get install -y \
 RUN export LLVM_CONFIG_PATH=/usr/local/opt/llvm/bin/llvm-config \
     && cargo install cargo-spellcheck
 
-ENTRYPOINT [ "cargo", "spellcheck" ]
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]

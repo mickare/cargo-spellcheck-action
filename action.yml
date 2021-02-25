@@ -11,4 +11,7 @@ runs:
   using: docker
   image: Dockerfile
   args:
-  - '--help'
+  - --cfg
+  - .config/spellcheck.toml
+  - -m
+  - 1
