@@ -17,4 +17,6 @@ jobs:
     
     - name: Check version
       uses: ./
-      run: cargo spellcheck --version
+      with:
+        entrypoint: /bin/bash
+        args: cargo spellcheck --version
