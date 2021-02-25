@@ -4,8 +4,8 @@ description: Github Action for cargo spellcheck (https://github.com/drahnr/cargo
 author: Michael Käser, Robin Freyler
 
 branding:
-  color: orange
-  icon: file-text
+  color: green
+  icon: type
 
 runs:
   using: docker
