@@ -18,5 +18,4 @@ jobs:
     - name: Check version
       uses: ./
       with:
-        entrypoint: /bin/bash
-        args: cargo spellcheck --version
+        args: --version

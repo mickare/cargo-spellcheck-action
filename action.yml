@@ -7,18 +7,8 @@ branding:
   color: orange
   icon: file-text
 
-inputs:
-  cfg:
-    description: 'Use a non default configuration file. (--cfg)'
-    required: true
-    default: '.config/spellcheck.toml'
-  error_code:
-    description: 'Overwrite the exit value for a successful run with content mistakes found.'
-    required: true
-    default: 0
-
 runs:
   using: docker
   image: Dockerfile
-  steps:
-    - run: cargo spellcheck check --cfg ${{ inputs.cfg }} -m ${{ inputs.error_code }}
+  args:
+  - '--help'

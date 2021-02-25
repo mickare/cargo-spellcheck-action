@@ -9,3 +9,5 @@ RUN apt-get update && apt-get install -y \
 # Configure LLVM and install cargo-spellcheck
 RUN export LLVM_CONFIG_PATH=/usr/local/opt/llvm/bin/llvm-config \
     && cargo install cargo-spellcheck
+
+ENTRYPOINT [ "carge", "spellcheck" ]
