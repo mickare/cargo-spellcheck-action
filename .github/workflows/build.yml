@@ -1,0 +1,20 @@
+name: Build the Action
+
+on: push
+
+jobs:
+  build:
+    name: Build Dockerfile
+    strategy:
+      matrix:
+        os: [ 'ubuntu-latest' ]
+      
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v1
+    
+    - name: Check version
+      uses: ./
+      run: cargo spellcheck --version
