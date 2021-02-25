@@ -10,5 +10,6 @@ branding:
 runs:
   using: docker
   image: Dockerfile
+  entrypoint: cargo spellcheck
   args:
   - '--help'
