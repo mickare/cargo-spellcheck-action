@@ -28,3 +28,21 @@ It is possible to pass custom arguments to spellcheck by defining them in the [`
       with:
         args: --cfg .config/my_spellcheck.toml --code 13
 ```
+
+## Workflow Example
+```yml
+name: Spellcheck
+
+on: push
+
+jobs:
+  spellcheck:
+    name: Spellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: mickare/cargo-spellcheck-action@v0.0.2
+        with:
+          args: --cfg .config/spellcheck.toml --code 1
+
+```
