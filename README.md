@@ -2,7 +2,9 @@
 
 This is a Github CI Action for [drahnr/cargo-spellcheck](https://github.com/drahnr/cargo-spellcheck) with hunspell (en_US).
 
-It forwards the command arguments to `cargo spellcheck <<args>>`.
+The action forwards the action `args` to `cargo spellcheck <<args>>`.
+
+To reduce the Action runtime the compilation of cargo-spellcheck is moved into a seperate [Docker image](https://github.com/mickare/cargo-spellcheck-image) at [hub.docker.com/r/mickare/cargo-spellcheck](https://hub.docker.com/r/mickare/cargo-spellcheck).
 
 ## Usage
 
@@ -41,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: mickare/cargo-spellcheck-action@v0.0.2
+      - uses: mickare/cargo-spellcheck-action@v0.0.3
         with:
           args: --cfg .config/spellcheck.toml --code 1
 
