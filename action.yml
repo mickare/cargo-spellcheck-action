@@ -10,8 +10,3 @@ branding:
 runs:
   using: docker
   image: Dockerfile
-  args:
-  - --cfg
-  - .config/spellcheck.toml
-  - -m
-  - 1

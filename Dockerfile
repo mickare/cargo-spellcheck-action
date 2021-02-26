@@ -12,3 +12,5 @@ RUN export LLVM_CONFIG_PATH=/usr/local/opt/llvm/bin/llvm-config \
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
+
+CMD --cfg .config/spellcheck.toml --code 1

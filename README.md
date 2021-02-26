@@ -26,5 +26,5 @@ It is possible to pass custom arguments to spellcheck by defining them in the [`
     - name: Cargo-Spellcheck
       uses: mickare/cargo-spellcheck-action
       with:
-        args: --cfg .config/my_spellcheck.toml -m 13
+        args: --cfg .config/my_spellcheck.toml --code 13
 ```
